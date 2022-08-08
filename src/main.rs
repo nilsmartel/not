@@ -20,7 +20,7 @@ fn main() {
     std::io::stdin().read_to_string(&mut input).expect("to read stdin as string");
 
     for line in input.lines() {
-        if regex.is_match(line) {
+        if !regex.is_match(line) {
             println!("{}", line);
         }
     }
